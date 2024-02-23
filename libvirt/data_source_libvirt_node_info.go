@@ -182,6 +182,7 @@ func convertUnit( unit string ) (int){
 }
 
 func resourceLibvirtNodeInfoRead(d *schema.ResourceData, meta interface{}) error {
+
 	uri := d.Get("host").(string)
 	virConn, err := meta.(*Client).Connection(&uri)
 	if virConn == nil {

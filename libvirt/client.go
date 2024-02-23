@@ -13,6 +13,7 @@ import (
 type Connection struct {
 	connection *libvirt.Libvirt
 	poolMutexKV *mutexkv.MutexKV
+
 	// define only one network at a time
 	// https://gitlab.com/libvirt/libvirt/-/issues/78
 	// note: this issue has been resolved in 2021 https://gitlab.com/libvirt/libvirt/-/commit/ea0cfa11

@@ -96,6 +96,7 @@ func resourceIgnitionDelete(ctx context.Context, d *schema.ResourceData, meta in
 
 	poolName := d.Get("pool").(string)
 
+
 	poolMutex := client.GetLock(&uri)
 	poolMutex.Lock(poolName)
 	defer poolMutex.Unlock(poolName)
