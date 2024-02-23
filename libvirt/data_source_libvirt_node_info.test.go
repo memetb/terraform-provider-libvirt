@@ -1,7 +1,6 @@
 package libvirt
 
 import (
-	"encoding/xml"
 	"reflect"
 	"testing"
 
